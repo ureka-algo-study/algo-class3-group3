@@ -53,6 +53,8 @@
     - **PRO**: 프로그래머스
     - **SWEA**: 삼성 SW Expert Academy
     - **예시:** `BOJ_1260_DFS와BFS.java`
+   
+- **커밋 메시지:** 자유형식
     <br><br>
 
 ## 📌 주차별 커리큘럼
