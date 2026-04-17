@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static int[][] map;
+    static int[] dirs = {0, 1, 0, -1, 0}; 
+    
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        map = new int[N][M];
+
+        for(int i = 0; i < N; i++) {
+            String s = br.readLine();
+            for(int j = 0; j < M; j++) {
+                map[i][j] = s.charAt(j) - '0';
+            }
+        }
+
+        Queue<int[]> q = new ArrayDeque<>();
+        
+        q.offer(new int[]{0, 0});
+        
+        while(!q.isEmpty()) {
+            int[] curr = q.poll();
+            int r = curr[0];
+            int c = curr[1];
+            
+            if (r == N - 1 && c == M - 1) {
+                System.out.println(map[r][c]);
+                break;
+            }
+
+            for(int i = 0; i < 4; i++) {
+                int nr = r + dirs[i];
+                int nc = c + dirs[i+1];
+                
+                if (nr >= 0 && nc >= 0 && nr < N && nc < M && map[nr][nc] == 1) {
+                    map[nr][nc] = map[r][c] + 1;
+                    q.offer(new int[]{nr, nc});
+                }
+            }
+        }
+    }
+}
