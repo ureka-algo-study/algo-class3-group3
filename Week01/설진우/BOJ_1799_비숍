@@ -1,0 +1,74 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class Main {
+
+    static int N;
+    static int[][] map;
+    static int[] dirr = {1, 1, -1, -1};
+    static int[] dirc = {1, -1, 1, -1};
+    static int max;
+    static List<int[]> poss = new ArrayList<>();
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+
+        st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        map = new int[N][N];
+
+        for(int r = 0; r < N; r++) {
+            st = new StringTokenizer(br.readLine());
+            for(int c = 0; c < N; c++) {
+                System.out.println("r = " + r + " c = " + c);
+                int s = Integer.parseInt(st.nextToken());
+                map[r][c] = s;
+                if(s == 1) {
+                    poss.add(new int[] {r, c});
+                }
+            }
+        }
+
+        max = Integer.MIN_VALUE;
+
+        backtracking(poss.size(), 0, 0);
+
+        System.out.println(max);
+    }
+
+    static void backtracking(int size, int i, int n) {
+        if(i == size) {
+            max = Math.max(max, n);
+            return;
+        }
+        int r = poss.get(i)[0];
+        int c = poss.get(i)[1];
+
+        backtracking(size, i + 1, n);
+
+        if(checkValid(r, c)) {
+            map[r][c] = 2;
+            backtracking(size, i + 1, n + 1);
+            map[r][c] = 1;
+        }
+    }
+
+    public static boolean checkValid(int r, int c) {
+        for(int i = 0; i < 4; i++) {
+            int nr = r;
+            int nc = c;
+            while(true) {
+                nr += dirr[i];
+                nc += dirc[i];
+                if(nr < 0 || nc < 0 || nr >= N || nc >= N) break;
+                if(map[nr][nc] == 2) return false;
+            }
+        }
+        return true;
+    }
+}
