@@ -70,8 +70,8 @@ for (let i = 1; i <= M; i++) {
   graph[v].push(u);
 }
 
-console.log('graph : ', graph);
-console.log('visited : ', visited);
+// console.log('graph : ', graph);
+// console.log('visited : ', visited);
 
 // dfs 함수 정의
 function dfs(start) {
