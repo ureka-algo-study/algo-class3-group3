@@ -49,3 +49,25 @@ dfs();
 // 방문한 곳 찾기
 const count = visited.filter((v) => v === true);
 console.log(count.length);
+
+// 더 좋은 방법
+// const fs=require("fs");
+// const input=fs.readFileSync(0).toString().trim().split('\n');
+
+// const n=Number(input[0]);
+// const list=input[1].split(' ').map(Number);
+// const s=Number(input[2]);
+
+// const set=new Set();
+
+// const queue=[[s,1]];
+// while(queue.length){
+//   const [curr, cnt]=queue.shift();
+
+//   set.add(curr);
+
+//   if(curr+list[curr-1]<=n) queue.push([curr+list[curr-1], cnt+1]);
+//   if(curr-list[curr-1]>0) queue.push([curr-list[curr-1], cnt+1]);
+// }
+
+// console.log(set.size);
