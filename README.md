@@ -1,71 +1,70 @@
 # 🎉 유레카 4기 3조 알고리즘 스터디 🎉
 
-
-
 ## 📅 스터디 개요
 
 - **기간**: 2026.04.16(목) ~ 2026.07.
 - **진행 방식**: 대면 모임 (강의실 혹은 라운지)
 - **정기 회의**: 매주 월요일 수업 종료 후
-- **플랫폼**: 백준 (BOJ), 프로그래머스 (PRO) 등
+- **플랫폼**: **프로그래머스 (PRO)** 중심
   <br><br>
 
 ## 🎯 스터디 목표
 
-- 주차별 핵심 알고리즘 문제 풀이 및 개념 완벽 정복
-- 단순 통과를 넘어선 **시간/공간 복잡도 최적화** 논의
-- 서로의 접근 로직 리뷰를 통한 더 나은 풀이법 공유
+- **동일 문제 다각도 분석**: 같은 문제를 서로 다른 로직으로 풀이하며 최적의 코드 탐색
+- **난이도 정복**: 프로그래머스 Level 3 문제를 통해 실전 코딩 테스트 감각 극대화
+- **효율성 최적화**: 시간 복잡도와 공간 복잡도를 고려한 백엔드 개발자 역량 강화
   <br><br>
 
-## 📌 스터디 운영 방식
+## 📌 스터디 운영 방식 (3주차부터 변경)
 
-- **문제 할당:** 매주 **5문제** 풀이
-- **과제 제출:** 매주 정기 모임 전까지 공용 레포지토리의 경로를 맞춰 Push 완료
+- **문제 선정:** 매주 **프로그래머스 Level 3** 중 **정답률이 높은 순**으로 **3문제** 선정
+- **공통 과제:** 모든 팀원이 **동일한 3문제**를 풀이하여 코드 리뷰의 효율성을 높임
+- **과제 제출:** 매주 정기 모임 전까지 공용 레포지토리의 본인 폴더에 Push 완료
 - **모임 진행 방식:**
-  - 각자 일주일 동안 푼 문제 중 **가장 고민을 많이 했던 문제 1개**를 선정합니다.
-  - 해당 문제의 **접근 로직, 자료구조 선택 근거, 트러블슈팅 과정**을 팀원들에게 해설 및 발표합니다.
+  - 선정된 3문제에 대해 각자의 접근 방식(자료구조, 알고리즘)을 비교합니다.
+  - 특히 효율성 테스트가 까다로운 문제에 대해 **시간 복잡도 최적화 방안**을 집중 토론합니다.
   <br><br>
 
 ## 📌 코드 리뷰 및 발표 초점
 
 단순히 코드를 읽어주는 발표는 지양하며, 아래 내용에 초점을 맞춰 준비합니다.
 
-- **알고리즘 선택 근거:** (예: "최단 거리 탐색이므로 가중치가 1인 점을 고려해 BFS를 선택함")
-- **최적화 방법:** 시간 초과 방지를 위한 방문 처리(Visited)나 가지치기(Pruning) 전략 공유
-- **가독성 & 네이밍:** 시스템 안정성을 고려하여 의미 있는 변수명 사용
-  <br><br>
-
-## 📌 모르는 문제 해결법
-
-- 40분 이상 충분히 고민해도 해결되지 않으면 검색을 허용합니다.
-- 단, 검색해서 푼 문제라도 코드를 그대로 복사하지 않고 **본인의 논리로 다시 작성**해야 합니다.
-- 정기 모임 때 막혔던 부분과 새롭게 알게 된 해결 방법을 팀원들에게 공유해 주세요.
+- **로직 비교:** "왜 이 자료구조가 이 문제에서 더 효율적이었는가?"에 대한 의견 교환
+- **트러블슈팅:** 동일한 문제에서 겪은 서로 다른 에러(런타임 에러, 시간 초과 등) 해결 과정 공유
+- **가독성 & 네이밍:** 실무 협업을 고려한 클린 코드 작성 여부 확인
   <br><br>
 
 ## 📌 제출 규칙 (3조 전용 폴더 구조)
 
-- **반드시 주차별 폴더 내의 본인 이름 폴더에 제출합니다.** (파일명 충돌 방지)
+- **반드시 주차별 폴더 내의 본인 이름 폴더에 제출합니다.**
 
 - **폴더 및 파일명 규칙:**
-  - **경로:** `Week0X/본인이름/` (예: `Week01/이경주/`)
+  - **경로:** `Week0X/본인이름/` (예: `Week03/이경주/`)
   - **파일명:** `플랫폼_문제번호_문제명.java`
-    - **BOJ**: 백준
-    - **PRO**: 프로그래머스
-    - **SWEA**: 삼성 SW Expert Academy
-    - **예시:** `BOJ_1260_DFS와BFS.java`
-   
-- **커밋 메시지:** 자유형식
+    - **예시:** `PRO_42884_단속카메라.java`
+    
+- **커밋 메시지:** 자유형식 (예: "Week03 과제 제출 - 이경주")
     <br><br>
 
 ## 📌 주차별 커리큘럼
 
-| 주차 | 기간 | 진행 알고리즘 | 문제 수 |
-| :---: | :---: | :--- | :---: |
-| **1주차** | 04.16 ~ 04.20 | **DFS / BFS** | 3문제 |
-| **2주차** | 04.21 ~ 04.27 | **구현 (Implementation)** | 5문제 |
-| **3주차** | 04.28 ~ 05.04 | **시뮬레이션 (Simulation)** | 5문제 |
-| **4주차** | 05.05 ~ 05.11 | **완전탐색 (Brute Force)** | 5문제 |
-| **5주차 이후** | - | **추후 논의 후 결정** | - |
+*3주차(04.28)부터 운영 방식이 변경되었습니다 (5문제 → 3문제 / 공통 문제 풀이).*
+
+| 주차 | 기간 | 진행 알고리즘 | 문제 수 | 비고 |
+| :---: | :---: | :--- | :---: | :--- |
+| **1주차** | 04.16 ~ 04.20 | DFS / BFS | 5문제 | 기존 방식 |
+| **2주차** | 04.21 ~ 04.27 | 구현 (Implementation) | 5문제 | 기존 방식 |
+| **3주차** | 04.28 ~ 05.04 | - | 3문제 | 프로그래머스 Lv.3 |
+| **4주차** | 05.05 ~ 05.11 | - | 3문제 | 5/4(월) 휴강으로 인한 한 주 쉬어감 |
+| **5주차** | 05.12 ~ 05.18 | - | 3문제 | 프로그래머스 Lv.3 |
+| **6주차** | 05.19 ~ 05.25 | - | 3문제 | 프로그래머스 Lv.3 |
+| **7주차** | 05.26 ~ 06.01 | - | 3문제 | 프로그래머스 Lv.3 |
+| **8주차** | 06.02 ~ 06.08 | - | 3문제 | 프로그래머스 Lv.3 |
+| **9주차** | 06.09 ~ 06.15 | - | 3문제 | 프로그래머스 Lv.3 |
+| **10주차** | 06.16 ~ 06.22 | - | 3문제 | 프로그래머스 Lv.3 |
+| **11주차** | 06.23 ~ 06.29 | - | 3문제 | 프로그래머스 Lv.3 |
+| **12주차** | 06.30 ~ 07.06 | - | 3문제 | 프로그래머스 Lv.3 |
+| **13주차** | 07.07 ~ 07.13 | - | 3문제 | 프로그래머스 Lv.3 |
 
 <br><br>
 
@@ -73,10 +72,10 @@
 
 <table>
     <tr>
-      <td height="140px" align="center"> <a href="https://github.com/rudwnlee2"><img src="https://avatars.githubusercontent.com/GITHUB_ID" width="140px" /><br/>🧑‍💻 이경주</a></td>
-      <td height="140px" align="center"> <a href="https://github.com/SH-Seol"><img src="https://avatars.githubusercontent.com/GITHUB_ID" width="140px" /><br/>🧑‍💻 설승환</a></td>
-      <td height="140px" align="center"> <a href="https://github.com/jerry7133"><img src="https://avatars.githubusercontent.com/GITHUB_ID" width="140px" /><br/>🧑‍💻 설진우</a></td>
-      <td height="140px" align="center"> <a href="https://github.com/llmeajinll"><img src="https://avatars.githubusercontent.com/GITHUB_ID" width="140px" /><br/>🧑‍💻 김혜진</a></td>
-      <td height="140px" align="center"> <a href="https://github.com/devjohnpark"><img src="https://avatars.githubusercontent.com/GITHUB_ID" width="140px" /><br/>🧑‍💻 박준서</a></td>
+      <td height="140px" align="center"> <a href="https://github.com/rudwnlee2"><img src="https://avatars.githubusercontent.com/rudwnlee2" width="140px" /><br/>🧑‍💻 이경주</a></td>
+      <td height="140px" align="center"> <a href="https://github.com/SH-Seol"><img src="https://avatars.githubusercontent.com/SH-Seol" width="140px" /><br/>🧑‍💻 설승환</a></td>
+      <td height="140px" align="center"> <a href="https://github.com/jerry7133"><img src="https://avatars.githubusercontent.com/jerry7133" width="140px" /><br/>🧑‍💻 설진우</a></td>
+      <td height="140px" align="center"> <a href="https://github.com/llmeajinll"><img src="https://avatars.githubusercontent.com/llmeajinll" width="140px" /><br/>🧑‍💻 김혜진</a></td>
+      <td height="140px" align="center"> <a href="https://github.com/devjohnpark"><img src="https://avatars.githubusercontent.com/devjohnpark" width="140px" /><br/>🧑‍💻 박준서</a></td>
     </tr>
 </table>
