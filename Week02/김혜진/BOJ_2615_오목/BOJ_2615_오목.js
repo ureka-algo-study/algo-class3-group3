@@ -48,10 +48,49 @@ const input = fs
   .split('\n');
 
 const board = input.map((line) => line.split(' ').map(Number));
-const visited = Array.from({ length: 19 }, () => Array(19).fill(false));
-// console.log(board);
-// 우, 우아래, 아래, 좌아래, 좌, 좌위, 위, 우위
-const dx = [0, 1, 1, 1, 0, -1, -1, -1];
-const dy = [1, 1, 0, 1, -1, 1, 0, -1];
 
-// 다시 풀기
+// 오른쪽 위, 오른쪽, 오른쪽 아래, 아래
+const dx = [1, 0, 1, 1];
+const dy = [-1, 1, 1, 0];
+
+let ans = 0;
+let ansx, ansy;
+
+function check(x, y, color) {
+  for (let i = 0; i < 4; i++) {
+    let nx = x + dx[i];
+    let ny = y + dy[i];
+    let cnt = 1;
+    while (1) {
+      if (nx < 0 || ny < 0 || nx >= 19 || ny >= 19) break;
+      if (board[nx][ny] !== color) break;
+      cnt++;
+      nx = nx + dx[i];
+      ny = ny + dy[i];
+    }
+    if (cnt === 5) {
+      let prevX = x - dx[i];
+      let prevY = y - dy[i];
+      if (prevX >= 0 && prevY >= 0 && prevX < 19 && prevY < 19) {
+        if (board[prevX][prevY] === color) {
+          continue;
+        }
+      }
+      ans = color;
+      ansx = x;
+      ansy = y;
+      return;
+    }
+  }
+  return;
+}
+for (let i = 0; i < 19; i++) {
+  for (let j = 0; j < 19; j++) {
+    if (board[i][j] === 0) continue;
+    check(i, j, board[i][j]);
+  }
+}
+if (ans === 0) console.log(0);
+else console.log(`${ans}\n${ansx + 1} ${ansy + 1}`);
+
+// 실패...
