@@ -1,6 +1,12 @@
+// DFS, BFS인 것 같은데 방향을 어떻게 다룰지 모르겠어서 시간내로 못 푼 문제
+// queue에 방향과 비용도 다 같이 넣어서 BFS로 풀면 되는 문제
+// N이 25이하여서 BFS가 가능했는데 더 컸으면 다익스트라로 풀어야 했을듯
+
+// 우선 순위 큐
+
 function solution(board) {
   const N = board.length;
-  const INF = Infinity;
+  const INF = Infinity; // 어떤 수보다도 항상 크다
 
   const dist = Array.from({ length: N }, () =>
     Array.from({ length: N }, () => Array(4).fill(INF)),
